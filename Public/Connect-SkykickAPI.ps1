@@ -16,15 +16,24 @@ function Connect-SkykickAPI {
     )
     
     Begin {
-        
+        try {
+            if (Get-SKWhoAmI) {
+                $return = $true
+            }
+        }
+        catch {
+            #not autenticated already, proceeding.
+        }
     }
 
     Process {
-        if (Get-SKAuthToken -apikey $apikey -userId $userId) {
-            $return = $true
-        }
-        else {
-            $return = $false
+        if ($null -eq $return) {
+            if (Get-SKAuthToken -apikey $apikey -userId $userId) {
+                $return = $true
+            }
+            else {
+                $return = $false
+            }
         }
     }
 

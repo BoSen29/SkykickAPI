@@ -21,10 +21,10 @@ function Connect-SkykickAPI {
 
     Process {
         if (Get-SKAuthToken -apikey $apikey -userId $userId) {
-            $return = "Connected to Skykick API"
+            $return = $true
         }
         else {
-            $return = "Failed to connect to Skykick API"
+            $return = $false
         }
     }
 

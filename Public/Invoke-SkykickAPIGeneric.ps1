@@ -19,7 +19,7 @@ function Invoke-SkykickAPIGeneric {
         if($null -ne (Get-SKVariable -Name "SKHeader")) { 
             try {
                 #validate credentials
-                Invoke-RestMethod -Uri "https://apis.skykick.com/isalive" -Method GET -Headers (Get-SKVariable -name "SKHeaders") | Out-Null
+                Invoke-RestMethod -Uri "https://apis.skykick.com/isalive" -Method GET -Headers (Get-SKVariable -name "SKHeader") | Out-Null
             }
             catch {
                 if ($_.Exception.Response.StatusCode -eq "401") {

@@ -1,4 +1,4 @@
-function Get-SKBackupExchangeDiscovery {
+function Invoke-SKBackupExchangeDiscovery {
     [CmdletBinding()]
     param (
         [Parameter(

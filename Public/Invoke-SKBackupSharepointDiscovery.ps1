@@ -1,4 +1,4 @@
-function Get-SKBackupSharepointDiscovery {
+function Invoke-SKBackupSharepointDiscovery {
     [CmdletBinding()]
     param (
         [Parameter(

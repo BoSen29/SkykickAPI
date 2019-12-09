@@ -1,14 +1,15 @@
 ---
-external help file:
+external help file: SkykickAPI-help.xml
 Module Name: SkykickAPI
 online version:
 schema: 2.0.0
 ---
 
+
 # Connect-SkykickAPI
 
 ## SYNOPSIS
-Authenticate to the Skykick API, and store the auth token for future reference. Returns $true on success and $false on failure.
+Authenticate to the Skykick API, and store the auth token for future reference. Returns true on success and false on failure.
 
 ## SYNTAX
 
@@ -85,7 +86,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### None
 
 ## OUTPUTS
-$true on success and $false on failure.
+
 ### System.Object
 ## NOTES
 

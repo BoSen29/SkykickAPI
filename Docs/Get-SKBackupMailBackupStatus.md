@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: SkykickAPI-help.xml
 Module Name: SkykickAPI
 online version:
 schema: 2.0.0

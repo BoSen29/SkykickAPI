@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: SkykickAPI-help.xml
 Module Name: SkykickAPI
 online version:
 schema: 2.0.0
@@ -68,7 +68,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### None
 
 ## OUTPUTS
-$true on success and $false on failure.
 ### System.Object
 ## NOTES
 

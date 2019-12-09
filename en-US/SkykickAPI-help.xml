@@ -1,0 +1,1586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Connect-SkykickAPI</command:name>
+      <command:verb>Connect</command:verb>
+      <command:noun>SkykickAPI</command:noun>
+      <maml:description>
+        <maml:para>Authenticate to the Skykick API, and store the auth token for future reference. Returns true on success and false on failure.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Authenticate to the Skykick API, and store the auth token for future reference.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Connect-SkykickAPI</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>apikey</maml:name>
+          <maml:Description>
+            <maml:para>APIKey to Skykick</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>userId</maml:name>
+          <maml:Description>
+            <maml:para>UserId to Skykick</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>scope</maml:name>
+          <maml:Description>
+            <maml:para>Scope to request access to.</maml:para>
+          </maml:Description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">Partner</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">Distributor</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>Partner</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>apikey</maml:name>
+        <maml:Description>
+          <maml:para>APIKey to Skykick</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>userId</maml:name>
+        <maml:Description>
+          <maml:para>UserId to Skykick</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>scope</maml:name>
+        <maml:Description>
+          <maml:para>Scope to request access to.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Partner</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Connect-SkykickAPI -apikey "someapikey" -userid "someuserkey"</dev:code>
+        <dev:remarks>
+          <maml:para>Authenticates to the Skykick API with the given apikey and userid</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKAuthToken</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKAuthToken</command:noun>
+      <maml:description>
+        <maml:para>Authenticate to the Skykick API, and store the auth token for future reference. Returns $true on success and $false on failure.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Authenticate to the Skykick API, and store the auth token for future reference.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKAuthToken</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>apikey</maml:name>
+          <maml:Description>
+            <maml:para>APIKey to Skykick</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>userId</maml:name>
+          <maml:Description>
+            <maml:para>UserId to Skykick</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>scope</maml:name>
+          <maml:Description>
+            <maml:para>Scope to request access to.</maml:para>
+          </maml:Description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">Partner</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">Distributor</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>Partner</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>apikey</maml:name>
+        <maml:Description>
+          <maml:para>APIKey to Skykick</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>userId</maml:name>
+        <maml:Description>
+          <maml:para>UserId to Skykick</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>scope</maml:name>
+        <maml:Description>
+          <maml:para>Scope to request access to.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Partner</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKAuthToken -apikey "someapikey" -userid "someuserkey"</dev:code>
+        <dev:remarks>
+          <maml:para>Authenticates to the Skykick API with the given apikey and userid</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupActiveBackupJob</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupActiveBackupJob</command:noun>
+      <maml:description>
+        <maml:para>Gets active running backup jobs.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Retrieves active running backup jobs from Skykick.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupActiveBackupJob</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupActiveBackupJob -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para>Gets active running backup jobs.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupAutoDiscoverState</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupAutoDiscoverState</command:noun>
+      <maml:description>
+        <maml:para>Gets the autodiscoverystate of the subscription.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the autodiscoverystate of the subscription.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupAutoDiscoverState</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupAutoDiscoverState -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para>Gets active running backup jobs.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupLastSnapshotStats</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupLastSnapshotStats</command:noun>
+      <maml:description>
+        <maml:para>Gets the stats of the last snapshots of the subscription.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the stats of the last snapshot of the subscription.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupLastSnapshotStats</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupLastSnapshotStats -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupMailBackupStatus</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupMailBackupStatus</command:noun>
+      <maml:description>
+        <maml:para>Gets the stats of backup of mailboxes in the subscription.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the stats of backup of mailboxes in the subscription.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupMailBackupStatus</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupMailBackupStatus -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupRetentionPeriod</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupRetentionPeriod</command:noun>
+      <maml:description>
+        <maml:para>Gets the retention period for the subscription.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the retention period for the subscription.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupRetentionPeriod</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupRetentionPeriod -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupSharepointBackupStatus</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupSharepointBackupStatus</command:noun>
+      <maml:description>
+        <maml:para>Gets the status of backup of sharepoint sites for the subscription.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the status of backup of sharepoint sites for the subscription.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupSharepointBackupStatus</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupSharepointBackupStatus -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupStorageSettings</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupStorageSettings</command:noun>
+      <maml:description>
+        <maml:para>Gets the storage settings for the subscription.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the storage settings for the subscription.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupStorageSettings</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupStorageSettings -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKBackupSubscriptionSettings</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKBackupSubscriptionSettings</command:noun>
+      <maml:description>
+        <maml:para>Gets the settings of the subscription.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the settings of the subscription.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKBackupSubscriptionSettings</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKBackupSubscriptionSettings -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKOperationStatus</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKOperationStatus</command:noun>
+      <maml:description>
+        <maml:para>Gets the status of an given operation id.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the status of an given operation id.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKOperationStatus</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>operationId</maml:name>
+          <maml:Description>
+            <maml:para></maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>operationId</maml:name>
+        <maml:Description>
+          <maml:para></maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKOperationStatus -operationId "someoperationId"</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKSubscriptions</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKSubscriptions</command:noun>
+      <maml:description>
+        <maml:para>Gets the current subscriptions.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the current subscriptions.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKSubscriptions</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKSubscriptions</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKVariable</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKVariable</command:noun>
+      <maml:description>
+        <maml:para>Gets the variable with the given name. Will use $script if Universal Dashboard is not loaded.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the variable with the given name. Will use $script if Universal Dashboard is not loaded.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKVariable</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>name</maml:name>
+          <maml:Description>
+            <maml:para>Variable name.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>string</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>name</maml:name>
+        <maml:Description>
+          <maml:para>Variable name.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKVariable -name "somevariable"</dev:code>
+        <dev:remarks>
+          <maml:para>Gets the relevant variable.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKWhoAmI</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKWhoAmI</command:noun>
+      <maml:description>
+        <maml:para>Whoami query to the Skykick API.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Whoami query to the Skykick API.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKWhoAmI</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKWhoAmI</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SKWorkQueue</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SKWorkQueue</command:noun>
+      <maml:description>
+        <maml:para>Gets the current workqueue</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Gets the current workqueue</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SKWorkQueue</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SKWorkQueue</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-SkykickAPIGeneric</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SkykickAPIGeneric</command:noun>
+      <maml:description>
+        <maml:para>Performs an generic request to the Skykick api, to the specified endpoint with the specified method and adds the authenticated header.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Performs an generic request to the Skykick api, to the specified endpoint with the specified method and adds the authenticated header.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-SkykickAPIGeneric</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>endpoint</maml:name>
+          <maml:Description>
+            <maml:para>URL after "https://apis.skykick.com/" for the rest-api.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>method</maml:name>
+          <maml:Description>
+            <maml:para>UserId to Skykick</maml:para>
+          </maml:Description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">GET</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">POST</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">PUT</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>endpoint</maml:name>
+        <maml:Description>
+          <maml:para>URL after "https://apis.skykick.com/" for the rest-api.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>method</maml:name>
+        <maml:Description>
+          <maml:para>UserId to Skykick</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SkykickAPIGeneric -endpoint "backup/?" -method GET</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Invoke-SKBackupExchangeDiscovery</command:name>
+      <command:verb>Invoke</command:verb>
+      <command:noun>SKBackupExchangeDiscovery</command:noun>
+      <maml:description>
+        <maml:para>Invokes an Exchange discovery, returns an operation id to check progress with Get-SKOperationStatus.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Invokes an Exchange discovery, returns an operation id to check progress with Get-SKOperationStatus.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-SKBackupExchangeDiscovery</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Invoke-SKBackupExchangeDiscovery -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para>Gets active running backup jobs.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Invoke-SKBackupSharepointDiscovery</command:name>
+      <command:verb>Invoke</command:verb>
+      <command:noun>SKBackupSharepointDiscovery</command:noun>
+      <maml:description>
+        <maml:para>Invokes an Shrepoint discovery, returns an operation id to check progress with Get-SKOperationStatus.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Invokes an Sharepoint discovery, returns an operation id to check progress with Get-SKOperationStatus.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-SKBackupSharepointDiscovery</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+          <maml:name>subscriptionId</maml:name>
+          <maml:Description>
+            <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+          <dev:type>
+            <maml:name>guid</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="0" aliases="none">
+        <maml:name>subscriptionId</maml:name>
+        <maml:Description>
+          <maml:para>SubscriptionId from Get-SKSubscriptions</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">guid</command:parameterValue>
+        <dev:type>
+          <maml:name>guid</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Invoke-SKBackupSharepointDiscovery -subscriptionId "somesubscriptionId"</dev:code>
+        <dev:remarks>
+          <maml:para>Gets active running backup jobs.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Set-SKVariable</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>SKVariable</command:noun>
+      <maml:description>
+        <maml:para>Sets the variable with the given name. Will use $script if Universal Dashboard is not loaded.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Sets the variable with the given name. Will use $script if Universal Dashboard is not loaded.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-SKVariable</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="no" position="0" aliases="none">
+          <maml:name>name</maml:name>
+          <maml:Description>
+            <maml:para>Variable name.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>string</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="1" aliases="none">
+          <maml:name>value</maml:name>
+          <maml:Description>
+            <maml:para></maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">undefined</command:parameterValue>
+          <dev:type>
+            <maml:name>undefined</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="no" position="0" aliases="none">
+        <maml:name>name</maml:name>
+        <maml:Description>
+          <maml:para>Variable name.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="yes" position="1" aliases="none">
+        <maml:name>value</maml:name>
+        <maml:Description>
+          <maml:para></maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">undefined</command:parameterValue>
+        <dev:type>
+          <maml:name>undefined</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Set-SKVariable -name "somevariable" -value "any value, or object"</dev:code>
+        <dev:remarks>
+          <maml:para>Sets the relevant variable.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>

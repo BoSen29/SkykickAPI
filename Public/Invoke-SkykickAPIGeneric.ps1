@@ -19,13 +19,14 @@ function Invoke-SkykickAPIGeneric {
         if($null -ne (Get-SKVariable -Name "SKHeader")) { 
             try {
                 #validate credentials
-                Invoke-RestMethod -Uri "https://apis.skykick.com/isalive" -Method GET -Headers (Get-SKVariable -name "SKHeader") | Out-Null
+                Invoke-RestMethod -Uri "https://apis.skykick.com/whoami" -Method GET -Headers (Get-SKVariable -name "SKHeader") | Out-Null
             }
             catch {
                 if ($_.Exception.Response.StatusCode -eq "401") {
                     #credentials failed
                     #try to generate a new access token
 
+                    Write-Verbose "Attempting to reauthenticate"
                     #store the cached variables in a local varaible, for future reference
                     $keys = Get-SKVariable -Name "SKKeys"
     
@@ -40,7 +41,7 @@ function Invoke-SkykickAPIGeneric {
                 else {
                     #remove the header var, as it is invalid
                     Set-SKVariable -name "SKHeader" -value $null | Out-Null
-                    throw ("IsAlive failed, non handled error $($Exception.Message)")
+                    throw ("IsAlive failed, non handled error $($_.Exception.Message)")
                 }
             }
         }
@@ -54,7 +55,7 @@ function Invoke-SkykickAPIGeneric {
             $return = Invoke-RestMethod -Uri "https://apis.skykick.com/$endpoint" -Headers (Get-SKVariable -name "SKHeader") -Method $method
         }
         catch {
-            throw ("Unknown error: $($Exception.Message)")
+            throw ("Unknown error: $($_.Exception.Message)")
         }
     }
     
